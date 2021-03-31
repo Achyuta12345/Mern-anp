@@ -30,8 +30,10 @@ app.get('/about',middleware,(req,res)=>{
      res.send('This is about page');
 });
 
-app.get('/contactus',()=>{
+app.get('/contactus',(req,res)=>{
+  res.cookie("test","thapa");
      res.send('This is contactus page');
+
 });
 
 app.get('/signin',(req,res)=>{
